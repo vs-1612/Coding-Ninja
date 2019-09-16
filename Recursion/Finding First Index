@@ -1,0 +1,8 @@
+def firstIndex(a, x, si):
+    l = len(a)
+    if l == 0:
+        return -1
+    if a[si] == x:
+        return si + 1
+    smallerOutput = firstIndex(a, x, si +1)
+    return smallerOutput 
