@@ -1,0 +1,14 @@
+def lastIndex(a, x, si):
+    l = len(a)
+    if l == 0 or si == -1:
+        return -1
+    if a[si] == x:
+        return si
+    smallerOutput = lastIndex(a, x, si - 1)
+    return smallerOutput
+
+n = int(input())
+a = [int(x) for x in input().split()]
+si = n - 1 
+x = int(input())
+print(lastIndex(a, x, si))
